@@ -1,0 +1,6 @@
+jobs:
+  strawberryhillCron:
+    cmd: ssh root@`wget -qO- https://www.strawberryhill.com/ip.php`  'cd /var/www/strawberryhill.com && bin/magento cron:run'
+    time: 0 0 1
+    onError: Stop
+ 
